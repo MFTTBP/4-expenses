@@ -1,3 +1,8 @@
+"""
+Мое дз
+"""
+
+
 buy_list = [100, 230, 1000, 3200, 1234, 222, 888]
 list_sum = sum(buy_list)
 general = sum(buy_list) // 7
