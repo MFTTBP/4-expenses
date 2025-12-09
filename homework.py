@@ -13,6 +13,6 @@ max_buy = max(buy_list)
 print(f"Минимальное значение: {min_buy}")
 print(f"Максимальное значение: {max_buy}")
 
-tuple_buy = list_sum, min_buy, max_buy
+tuple_buy = min_buy, max_buy, list_sum
 
 print(tuple_buy)
