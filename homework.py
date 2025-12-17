@@ -1,9 +1,11 @@
 """
-Мое дз
-"""
+#Мое дз
+#"""
 a = input("").lower().strip()
-b = a.split(" ")
+b = a.strip().split(" ")
 c = False if b[0].isdigit() else True
+
+print(len(b))
 
 if len(b) != 2 and len(b) != 4:
     print("Некорректный формат суммы")
@@ -17,9 +19,9 @@ elif len(b) == 4 and b[3] != "коп":
     print("Некорректный формат суммы")
 elif c:
     print("Некорректный формат суммы")
-elif len(b) == 4 and b[2].isdigit() is False:
+elif len(b) == 4 and not b[2].isdigit():
     print("Некорректный формат суммы")
-elif len(b) == 4 and int(b[2]) > 99 or int(b[2]) < 0:
+elif len(b) == 4 and int(b[2]) > 99:
     print("Некорректный формат суммы")
 elif len(b) == 2:
     print(f"{b[0]}.00 ₽")
