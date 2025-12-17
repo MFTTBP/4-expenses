@@ -2,10 +2,9 @@
 #Мое дз
 #"""
 a = input("").lower().strip()
-b = a.strip().split(" ")
+b = a.strip().split()
 c = False if b[0].isdigit() else True
 
-print(len(b))
 
 if len(b) != 2 and len(b) != 4:
     print("Некорректный формат суммы")
@@ -22,6 +21,7 @@ elif c:
 elif len(b) == 4 and not b[2].isdigit():
     print("Некорректный формат суммы")
 elif len(b) == 4 and int(b[2]) > 99:
+
     print("Некорректный формат суммы")
 elif len(b) == 2:
     print(f"{b[0]}.00 ₽")
