@@ -3,16 +3,14 @@
 """
 
 
-buy_list = [100, 230, 1000, 3200, 1234, 222, 888]
-list_sum = sum(buy_list)
-general = sum(buy_list) // 7
-print(f"Сумма: {list_sum}")
-print(f"Среднее значение: {general}")
-min_buy = min(buy_list)
-max_buy = max(buy_list)
-print(f"Минимальное значение: {min_buy}")
-print(f"Максимальное значение: {max_buy}")
+a = input("")
+b = a.split(" ")
 
-tuple_buy = min_buy, max_buy, list_sum
-
-print(tuple_buy)
+if len(b) > 4 or len(b) < 2:
+    print("Некорректный формат суммы")
+elif len(b) == 2:
+    print(f"{b[0]}.00 ₽")
+elif len(b) == 4 and len(b[2]) < 2:
+    print(f"{b[0]}.{b[2].zfill(2)} ₽")
+else:
+    print(f"{b[0]}.{b[2]} ₽")
