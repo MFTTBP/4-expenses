@@ -1,16 +1,17 @@
 """
-Мое дз
-"""
+#Мое дз
+#"""
+a = [
+    "Добавить расход",
+    "Показать все расходы",
+    "Показать сумму и средний расход",
+    "Удалить расход по номеру",
+]
 
 
-a = input("")
-b = a.split(" ")
-
-if len(b) > 4 or len(b) < 2:
-    print("Некорректный формат суммы")
-elif len(b) == 2:
-    print(f"{b[0]}.00 ₽")
-elif len(b) == 4 and len(b[2]) < 2:
-    print(f"{b[0]}.{b[2].zfill(2)} ₽")
-else:
-    print(f"{b[0]}.{b[2]} ₽")
+while True:
+    for i in a:
+        print(i)
+    user = input("").capitalize()
+    if user == "Выход":
+        break
