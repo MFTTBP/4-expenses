@@ -10,29 +10,39 @@ menu = [
 ]
 expenses = []
 
+
+def print_report(exp: list, summ: float):
+    print(f"Расходы:{exp}\nСумма:{summ}")
+
+
 def add_expense(value: float):
     expenses.append(value)
-    
+
 
 def summa():
-    s = sum(expenses)
-    return s
+    return sum(expenses)
+
 
 def srednee():
-    s = sum(expenses) / len(expenses)
-    return s
+    if len(expenses) == 0:
+        return 0
+    return sum(expenses) / len(expenses)
 
-def delete():
-    del expenses[del_us]
-    return expenses
+
+def delete(index):
+    if 0 <= index < len(expenses):
+        del expenses[index]
+    else:
+        print("Неверный номер расхода")
+
 
 while True:
     for i in menu:
         print(i)
-    user = input("").capitalize()
+    user = input("")
     if user == "1":
         user_exp = float(input(""))
-        add = add_expense(user_exp)
+        add_expense(user_exp)
     elif user == "2":
         print(expenses)
     elif user == "3":
@@ -40,7 +50,7 @@ while True:
         print(f"Среднее значение: {srednee()}")
     elif user == "4":
         del_us = int(input(""))
-        dele = delete()
-    if user == "Выход":
+        delete(del_us)
+    if user.lower() == "выход":
+        print_report(expenses, summa())
         break
-
